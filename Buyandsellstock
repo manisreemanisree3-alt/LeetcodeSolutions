@@ -1,0 +1,16 @@
+class Solution {
+    public int maxProfit(int[] a) {
+
+        int cp=a[0];
+        int maxi=0;
+        int n=a.length;
+
+        for(int i=1;i<n;i++){
+            int p=a[i]-cp;
+            cp=Math.min(a[i],cp);
+            maxi=Math.max(p,maxi);
+        }
+        return maxi;
+
+    }
+}
